@@ -9,21 +9,21 @@ Açık kalma ve kapalı kalma süreleri flash hafızaya yazılarak enerji kesili
 
 Echo'yu pasif etmek için ;<br>
 ```
-<h3>stop</h3>
+stop
 ```
 Echo'yu aktif etmek için ;<br>
 ```
-<h3>start</h3>
+start
 ```
 
 Led açık kalma süresini ayarlamak için ;<br>
 ```
-<h3>ledon=TIME_MS</h3>
+ledon=TIME_MS
 ```
 
 Led kapalı kalma süresini ayarlamak için ;<br>
 ```
-<h3>ledoff=TIME_MS</h3>
+ledoff=TIME_MS
 ```
 
 ## Test Etmek
