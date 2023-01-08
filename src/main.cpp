@@ -1,3 +1,4 @@
+
 #include <taskLed.h>
 #include "main.h"
 #include "string.h"
@@ -7,8 +8,9 @@ uint8_t text[32];
 uint16_t size = 0;
 bool uartStatus = false;
 
-
 led Led;
+
+
 UART_HandleTypeDef huart2;
 
 
@@ -44,22 +46,24 @@ void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart) {
 ///// Send Data Complate Interrupt
 /////////////////////////////////////////////////////////
 
+
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 
-
 int main(void) {
 
-    Led.setTime();
+	Led.setTime();
     
 	HAL_Init();
+    
 	SystemClock_Config();
-
+    
 	MX_GPIO_Init();
 	MX_USART2_UART_Init();
-
+    
 	HAL_UART_Receive_IT(&huart2, tempBuff, 1);
+
 
 	while (1) {
 
@@ -69,7 +73,7 @@ int main(void) {
 			uartStatus = false;
 		}
 
+		Led.task1();
 
 	}
-
 }
