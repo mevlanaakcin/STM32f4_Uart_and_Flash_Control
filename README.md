@@ -9,6 +9,22 @@ Açık kalma ve kapalı kalma süreleri flash hafızaya yazılarak enerji kesili
 
 Echo'yu pasif etmek için ;<br>
 ```
-stop
-
+<h3>stop</h3>
 ```
+Echo'yu aktif etmek için ;<br>
+```
+<h3>start</h3>
+```
+
+Led açık kalma süresini ayarlamak için ;<br>
+```
+<h3>ledon=TIME_MS</h3>
+```
+
+Led kapalı kalma süresini ayarlamak için ;<br>
+```
+<h3>ledoff=TIME_MS</h3>
+```
+
+## Test Etmek
+STM32F4RE Nucleo kartında kullanmak için .rar olarak paylaşılan dosyayı kullanabilirsiniz.
