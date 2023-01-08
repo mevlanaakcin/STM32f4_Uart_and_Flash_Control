@@ -51,6 +51,8 @@ static void MX_USART2_UART_Init(void);
 
 int main(void) {
 
+    Led.setTime();
+    
 	HAL_Init();
 	SystemClock_Config();
 
@@ -61,7 +63,11 @@ int main(void) {
 
 	while (1) {
 
+		if (uartStatus == true) {
 
+			Led.task2(&huart2, text, sizeof(text));
+			uartStatus = false;
+		}
 
 
 	}

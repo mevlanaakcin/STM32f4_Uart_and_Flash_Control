@@ -26,7 +26,20 @@ private:
 
 public:
 
+	uint32_t ledTime[2];
 
+	bool uart = true;
+
+	GPIO_PinState getState = GPIO_PIN_SET;
+
+	uint32_t lastTime = 0;
+
+
+	void setTime();
+
+	void task1();
+
+	void task2(UART_HandleTypeDef *huart, uint8_t *msg, uint8_t SIZE);
 };
 
 #endif /* INC_TASKLED_H_ */
