@@ -27,4 +27,5 @@ ledoff=TIME_MS
 ```
 
 ## Test Etmek
-STM32F4RE Nucleo kartında kullanmak için .rar olarak paylaşılan dosyayı kullanabilirsiniz.
+STM32F4RE Nucleo kartında kullanmak için .rar olarak paylaşılan dosyayı kullanabilirsiniz.<br>
+Uart arayüzüne veri Göndermek/Almak için  RealTerm vb. programlar kullanılabilir. Ben Arduino IDE de yer alan Serial Mönitörü kullandım.
