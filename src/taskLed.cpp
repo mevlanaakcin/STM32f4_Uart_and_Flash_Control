@@ -86,8 +86,7 @@ void led::task2(UART_HandleTypeDef *huart, uint8_t *msg, uint8_t SIZE) {
 
 	sscanf((char*) msg, "ledoff=%d", (int*) &ledTime[1]);
 
-	if (!strncmp((char*) msg, "ledon", 5)
-			|| !strncmp((char*) msg, "ledoff", 6)) {
+	if (!strncmp((char*) msg, "ledon", 5) || !strncmp((char*) msg, "ledoff", 6)) {
 
 		Flash_Write(ledTime[0], ledTime[1]); // Memory address is constant so function is just variables input.
 
